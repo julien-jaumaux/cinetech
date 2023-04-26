@@ -16,8 +16,19 @@ include('./include/user.php');
 </head>
 <body>
     <h1>Nos films</h1>
+
+    <h2>Films les mieux notés</h2>
+    <div id="filmnote"></div>
+
+    <h2>Dernières sorties</h2>
+    <div id="filmnew"></div>
+
+    <h2>Films à venir</h2>
+    <div id="filmcom"></div>
     
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
+<script src="./js/film.js"></script>
+<script src="./js/detail.js"></script>
