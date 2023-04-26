@@ -21,6 +21,13 @@ fetch(`${apiUrl}/movie/top_rated?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "filmnote"
        film.appendChild(imgElement);
+
+/////////////////renvoi vers détail//////////////////////////////////////
+       const id = movie.id;
+       imgElement.addEventListener('click', function(){
+         window.location.href = 'detail.php?id=' + id;
+       });
+       /////////////////////////////////////
     });
   })
   .catch(error => console.error(error));
@@ -38,7 +45,8 @@ fetch(`${apiUrl}/tv/top_rated?api_key=${apiKey}`)
     // Parcourir les films et récupérer les images
     movies.forEach(movie => {
       const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-      console.log(imageUrl); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
+
+      console.log(movie.id); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
 
        // Créer un élément d'image
        const imgElement = document.createElement('img');
@@ -47,6 +55,11 @@ fetch(`${apiUrl}/tv/top_rated?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "filmnote"
        serie.appendChild(imgElement);
+
+       const id = movie.id;
+       imgElement.addEventListener('click', function(){
+         window.location.href = 'detail.php?id=' + id;
+       })
     });
   })
   .catch(error => console.error(error));

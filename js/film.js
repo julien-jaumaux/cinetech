@@ -23,6 +23,12 @@ fetch(`${apiUrl}/movie/top_rated?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "filmnote"
        filmnote.appendChild(imgElement);
+
+       /////////////////renvoi vers détail//////////////////////////////////////
+       const id = movie.id;
+       imgElement.addEventListener('click', function(){
+         window.location.href = 'detail.php?id=' + id;
+       });
     });
   })
   .catch(error => console.error(error));
@@ -36,7 +42,7 @@ fetch(`${apiUrl}/movie/now_playing?api_key=${apiKey}`)
   .then(data => {
     // Obtenir les données des films
     const movies = data.results;
-
+    
     // Parcourir les films et créer un élément d'image pour chaque film
     movies.forEach(movie => {
       const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -48,6 +54,12 @@ fetch(`${apiUrl}/movie/now_playing?api_key=${apiKey}`)
 
       // Ajouter l'élément d'image à la div "filmnote"
       filmnew.appendChild(imgElement);
+
+/////////////////renvoi vers détail//////////////////////////////////////
+const id = movie.id;
+imgElement.addEventListener('click', function(){
+  window.location.href = 'detail.php?id=' + id;
+});
     });
   })
   .catch(error => console.error(error));
@@ -72,6 +84,12 @@ fetch(`${apiUrl}/movie/now_playing?api_key=${apiKey}`)
 
       // Ajouter l'élément d'image à la div "filmnote"
       filmcom.appendChild(imgElement);
+
+      /////////////////renvoi vers détail//////////////////////////////////////
+      const id = movie.id;
+      imgElement.addEventListener('click', function(){
+        window.location.href = 'detail.php?id=' + id;
+      });
     });
   })
   .catch(error => console.error(error));

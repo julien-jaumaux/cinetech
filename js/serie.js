@@ -24,6 +24,12 @@ fetch(`${apiUrl}/tv/top_rated?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "sérienote"
        serienote.appendChild(imgElement);
+
+       /////////////////renvoi vers détail//////////////////////////////////////
+       const id = tv.id;
+       imgElement.addEventListener('click', function(){
+         window.location.href = 'detail.php?id=' + id;
+       });
     });
   })
   .catch(error => console.error(error));
@@ -50,6 +56,12 @@ fetch(`${apiUrl}/tv/popular?api_key=${apiKey}`)
 
      // Ajouter l'élément d'image à la div "sérienew"
      serienew.appendChild(imgElement);
+
+     /////////////////renvoi vers détail//////////////////////////////////////
+     const id = tv.id;
+     imgElement.addEventListener('click', function(){
+       window.location.href = 'detail.php?id=' + id;
+     });
   });
 })
 .catch(error => console.error(error));
@@ -75,6 +87,12 @@ fetch(`${apiUrl}/tv/genre?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "sériecom"
        seriecom.appendChild(imgElement);
+
+       /////////////////renvoi vers détail//////////////////////////////////////
+       const id = movie.id;
+       imgElement.addEventListener('click', function(){
+         window.location.href = 'detail.php?id=' + id;
+       });
     });
   })
   .catch(error => console.error(error));
