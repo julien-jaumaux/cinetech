@@ -15,13 +15,15 @@ include('./include/user.php');
     <title>Détails</title>
 </head>
 <body>
-    <h2>Détails du film</h2>
+    <h2>Détails du film ou de la série</h2>
 
     <div id="movie-details"></div>
-<p>
-    <h2>Casting du film</h2>
 
-    <div id="casting"></div>
+    <div id="movie-credits"></div>
+
+    <div id="tv-details"></div>
+
+    <div id="tv-credits"></div>
 
 
     <?php
