@@ -27,7 +27,7 @@ fetch(`${apiUrl}/movie/top_rated?api_key=${apiKey}`)
        /////////////////renvoi vers détail//////////////////////////////////////
        const id = movie.id;
        imgElement.addEventListener('click', function(){
-         window.location.href = 'detail.php?id=' + id;
+         window.location.href = 'detail.php?id=' + id +"&type=movie";
        });
     });
   })
@@ -58,7 +58,7 @@ fetch(`${apiUrl}/movie/now_playing?api_key=${apiKey}`)
 /////////////////renvoi vers détail//////////////////////////////////////
 const id = movie.id;
 imgElement.addEventListener('click', function(){
-  window.location.href = 'detail.php?id=' + id;
+  window.location.href = 'detail.php?id=' + id +"&type=movie";
 });
     });
   })
@@ -88,7 +88,7 @@ imgElement.addEventListener('click', function(){
       /////////////////renvoi vers détail//////////////////////////////////////
       const id = movie.id;
       imgElement.addEventListener('click', function(){
-        window.location.href = 'detail.php?id=' + id;
+        window.location.href = 'detail.php?id=' + id +"&type=movie";
       });
     });
   })
