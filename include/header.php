@@ -43,12 +43,18 @@
         }
         ?>
       </ul>
+      <div class="search-result-bar">
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="movie">
         <button class="btn btn-outline-success" type="submit">Recherche</button>
       </form>
+      <div id="result"></div>
+      </div>
     </div>
   </div>
 </nav>
+
+
+<script src="./js/search.js"></script>
 
 

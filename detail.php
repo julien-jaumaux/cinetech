@@ -50,8 +50,6 @@ echo '<section id="details"></section>';
 <body>
     <h2>Détails</h2>
 
-    <button id="fav-btn">Ajouter aux favoris</button>
-
 
     <div id="movie-details"></div>
 

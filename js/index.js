@@ -8,11 +8,11 @@ fetch(`${apiUrl}/movie/top_rated?api_key=${apiKey}`)
   .then(data => {
     // Obtenir les données des films
     const movies = data.results;
-    console.log(data.results)
+    //console.log(data.results)
     // Parcourir les films et récupérer les images
     movies.forEach(movie => {
       const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-      console.log(imageUrl); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
+      //console.log(imageUrl); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
 
        // Créer un élément d'image
        const imgElement = document.createElement('img');
@@ -41,12 +41,12 @@ fetch(`${apiUrl}/tv/top_rated?api_key=${apiKey}`)
   .then(data => {
     // Obtenir les données des films
     const movies = data.results;
-    console.log(data.results)
+    //console.log(data.results)
     // Parcourir les films et récupérer les images
     movies.forEach(movie => {
       const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-      console.log(movie.id); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
+      //console.log(movie.id); // Faites ce que vous voulez avec l'URL de l'image (par exemple, l'afficher dans une balise img)
 
        // Créer un élément d'image
        const imgElement = document.createElement('img');
