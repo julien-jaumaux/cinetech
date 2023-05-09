@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">La cinetech</a>
@@ -12,19 +14,15 @@
         <li class="nav-item">
           <a class="nav-link active" href="film.php">Film</a>
         </li>
-        </li>
         <li class="nav-item">
           <a class="nav-link active" href="serie.php">Série</a>
         </li>
+        <?php 
+        // Vérifie si l'utilisateur est connecté
+        if (isset($_SESSION['user'])) { 
+        ?>
         <li class="nav-item">
           <a class="nav-link active" href="favoris.php">Vos favoris</a>
-        </li>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="inscription.php">Inscription</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="connexion.php">Connexion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="profil.php">Profil</a>
@@ -32,7 +30,18 @@
         <li class="nav-item">
           <a class="nav-link active" href="logout.php">Deconnexion</a>
         </li>
-
+        <?php 
+        } else { // Si l'utilisateur n'est pas connecté, affiche les onglets Inscription et Connexion
+        ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="inscription.php">Inscription</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="connexion.php">Connexion</a>
+        </li>
+        <?php 
+        }
+        ?>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,3 +50,5 @@
     </div>
   </div>
 </nav>
+
+

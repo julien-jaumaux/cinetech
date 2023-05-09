@@ -156,3 +156,8 @@ if (type === 'movie') {
 } else {
   console.error('Type de contenu non pris en charge.');
 }
+
+
+////////////////////ajout favoris//////////
+
+

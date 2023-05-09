@@ -55,7 +55,7 @@ fetch(`${apiUrl}/tv/top_rated?api_key=${apiKey}`)
  
        // Ajouter l'élément d'image à la div "filmnote"
        serie.appendChild(imgElement);
-
+/////////rend l'élément cliquable///////////
        const id = movie.id;
        imgElement.addEventListener('click', function(){
          window.location.href = 'detail.php?id=' + id +"&type=tv";
